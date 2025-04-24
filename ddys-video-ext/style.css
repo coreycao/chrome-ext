@@ -1,0 +1,87 @@
+/* 悬浮按钮样式 */
+.ddys-history-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #724caf; /* 示例颜色 */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 24px; */ /* 移除字体大小，因为现在是图标 */
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.ddys-history-button:hover {
+  background-color: #45a049;
+}
+
+/* 历史记录弹窗样式 */
+.ddys-history-popup {
+  position: fixed;
+  bottom: 80px; /* 按钮上方 */
+  left: 20px;
+  width: 300px;
+  max-height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+  overflow-y: auto;
+  display: none; /* 默认隐藏 */
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ddys-history-popup.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ddys-history-popup h4 {
+  color: #333; /* 设置标题颜色为深灰色 */
+  font-size: 16px; /* 减小标题字体大小 */
+  margin: 0 0 5px 0; /* 调整外边距，减少下方间距 */
+  padding: 0; /* 移除内边距 */
+}
+
+.ddys-history-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ddys-history-popup li {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ddys-history-popup li:last-child {
+  border-bottom: none;
+}
+
+.ddys-history-popup li:hover {
+  background-color: #f0f0f0;
+}
+
+.ddys-history-popup a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
