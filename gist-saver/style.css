@@ -1,0 +1,100 @@
+/* style.css - Styles for the GistSaver input layer */
+
+#gistSaverInputLayer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f0f0f0; /* Secondary color */
+  color: #333; /* Primary color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10000; /* Ensure it's on top */
+  font-family: sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+#gistSaverInputLayer h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333; /* Primary color */
+  font-size: 1.1em;
+  text-align: center;
+}
+
+#gistSaverInputLayer input[type="text"] {
+  width: calc(100% - 22px); /* Account for padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff; /* White background for input */
+  color: #333;
+}
+
+#gistSaverInputLayer button {
+  background-color: #008080; /* Accent color */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#gistSaverInputLayer button:hover {
+  background-color: #006666; /* Darker accent */
+}
+
+#gistSaverInputLayer button#cancelGistButton {
+  background-color: #aaa;
+}
+
+#gistSaverInputLayer button#cancelGistButton:hover {
+  background-color: #888;
+}
+
+#gistSaverInputLayer button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#gistStatus {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#gistStatus.loading {
+  background-color: #e2e3e5;
+  color: #383d41;
+  border: 1px solid #d6d8db;
+}
+
+#gistStatus.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+#gistStatus.success a {
+    color: #008080; /* Accent color for link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#gistStatus.success a:hover {
+    text-decoration: underline;
+}
+
+#gistStatus.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

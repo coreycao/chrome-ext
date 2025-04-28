@@ -1,0 +1,31 @@
+/* popup.css */
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0; /* Secondary color */
+  color: #333; /* Primary color */
+  padding: 15px;
+  min-width: 200px;
+  text-align: center;
+}
+
+h1 {
+  color: #333; /* Primary color */
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+a,
+a:visited {
+  color: #008080; /* Accent color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

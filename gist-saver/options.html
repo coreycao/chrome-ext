@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GistSaver Options</title>
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body>
+  <h1>GistSaver Options</h1>
+  <div class="container">
+    <label for="githubToken">GitHub Personal Access Token:</label>
+    <input type="password" id="githubToken" name="githubToken" placeholder="Enter your token">
+    <button id="saveToken">Save Token</button>
+    <p id="status"></p>
+    <p class="info">Your token needs the 'gist' scope to create Gists. It's stored securely using Chrome's storage API.</p>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
