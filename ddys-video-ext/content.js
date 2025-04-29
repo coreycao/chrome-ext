@@ -4,7 +4,7 @@ console.log('低端影视浏览记录插件已加载');
 const historyButton = document.createElement('button');
 historyButton.classList.add('ddys-history-button');
 // 使用图标代替文字
-const iconUrl = chrome.runtime.getURL('icons/icon48.svg');
+const iconUrl = chrome.runtime.getURL('icons/btn.svg');
 const iconImg = document.createElement('img');
 iconImg.src = iconUrl;
 iconImg.style.width = '24px'; // 设置图标大小
@@ -16,13 +16,29 @@ document.body.appendChild(historyButton);
 const historyPopup = document.createElement('div');
 historyPopup.classList.add('ddys-history-popup');
 historyPopup.innerHTML = `
-  <h4>浏览记录</h4>
+  <div class="ddys-popup-header">
+    <h4>浏览记录</h4>
+    <button class="ddys-clear-history-button">清除记录</button>
+  </div>
   <ul>
     <!-- 历史记录将在这里动态添加 -->
     <li>暂无记录</li>
   </ul>
 `;
 document.body.appendChild(historyPopup);
+
+// 获取清除按钮并添加事件监听器
+const clearHistoryButton = historyPopup.querySelector('.ddys-clear-history-button');
+clearHistoryButton.addEventListener('click', () => {
+  // 清除存储中的历史记录
+  chrome.storage.local.set({ videoHistory: [] }, () => {
+    console.log('浏览记录已清除');
+    // 更新弹窗中的列表显示
+    const historyList = historyPopup.querySelector('ul');
+    historyList.innerHTML = '<li>暂无记录</li>';
+    // 可以选择性地短暂显示提示信息
+  });
+});
 
 let hidePopupTimeout;
 

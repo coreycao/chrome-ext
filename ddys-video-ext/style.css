@@ -5,7 +5,7 @@
   left: 20px;
   width: 50px;
   height: 50px;
-  background-color: #724caf; /* 示例颜色 */
+  background-color: #724caf;
   color: white;
   border: none;
   border-radius: 50%;
@@ -14,7 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-size: 24px; */ /* 移除字体大小，因为现在是图标 */
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
@@ -47,6 +46,13 @@
   display: block;
   opacity: 1;
   transform: translateY(0);
+}
+
+.ddys-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px; /* 与列表保持间距 */
 }
 
 .ddys-history-popup h4 {
@@ -84,4 +90,20 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* 清除记录按钮样式 */
+.ddys-clear-history-button {
+  /* background-color: #f44336; /* 红色背景 */ 
+  color: #333;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.ddys-clear-history-button:hover {
+  background-color: #d32f2f; /* 深红色 */
 }
